@@ -12,7 +12,7 @@ $('document').ready(function () {
         alertTip = 1;
         }catch(me){
         }
-    },5000)
+    },15000)
 
     setup();
     //$('#bio').css('left',window.innerWidth+10+'px');
