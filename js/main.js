@@ -2,7 +2,7 @@ $('document').ready(function () {
     scrolled = 0;
     setInterval(function(){
         scrolled = 1;
-    },1000)
+    },2000)
     alertTip = 0;
     killme = setTimeout(function(){
         $('#alerttip .modal-title').text('Help!');
@@ -32,10 +32,10 @@ $('document').ready(function () {
     });
     document.addEventListener("wheel", function (e) {
         e.preventDefault();
-        if(scrolled){
+        if(scrolled==1 && Math.abs(e.deltaY)>25){
         var variation = parseInt(e.deltaY);
-        changeFrame(variation);
         scrolled = 0;
+        changeFrame(variation);
         }
         
     }, true);
