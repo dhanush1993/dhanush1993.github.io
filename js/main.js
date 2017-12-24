@@ -14,14 +14,13 @@ $('document').ready(function() {
     setup();
     //$('#bio').css('left',window.innerWidth+10+'px');
     $(document).keydown(function(e) {
-        if(scrolled){
+        
         e.preventDefault();
         if (e.keyCode == 37) { // left
             changeFrame(-120);
         } else if (e.keyCode == 39) { // right
             changeFrame(120);
         }
-    }
     });
     window.addEventListener("resize", function(e) {
         e.preventDefault();
@@ -30,10 +29,8 @@ $('document').ready(function() {
     });
     document.addEventListener("wheel", function(e) {
         e.preventDefault();
-        if (scrolled == 1 && Math.abs(e.deltaY) > 25) {
+        if (Math.abs(e.deltaY) > 25) {
             var variation = parseInt(e.deltaY);
-            scrolled = 0;
-            console.log('scrolled');
             changeFrame(variation);
         }
 
@@ -101,221 +98,224 @@ var maxFrames = 6;
 
 function changeFrame(direction) {
 
-    try {
-        if (alertTip) {
-            $('#alerttip').modal('hide');
-            alertTip = 0;
+    if(scrolled){
+        scrolled = 0;
+        try {
+            if (alertTip) {
+                $('#alerttip').modal('hide');
+                alertTip = 0;
+            }
+            clearInterval(killme);
+        } catch (me) {}
+        if (direction > 0) {
+            frame = frame + 1
+            if (frame > maxFrames) {
+                frame = maxFrames;
+            }
+        } else {
+            frame = frame - 1;
+            if (frame < 0) {
+                frame = 0;
+            }
+
         }
-        clearInterval(killme);
-    } catch (me) {}
-    if (direction > 0) {
-        frame = frame + 1
-        if (frame > maxFrames) {
-            frame = maxFrames;
-        }
-    } else {
-        frame = frame - 1;
-        if (frame < 0) {
-            frame = 0;
+
+        if (frame > 0) {
+            $('#scrollUp').show();
+        } else {
+            $('#scrollUp').hide();
         }
 
-    }
-
-    if (frame > 0) {
-        $('#scrollUp').show();
-    } else {
-        $('#scrollUp').hide();
-    }
-
-    if (frame < maxFrames) {
-        $('#scrollDown').show();
-    } else {
-        $('#scrollDown').hide();
-    }
-    switch (frame) {
-        case 0:
-            $('#projects').animate({
-                'top': window.innerHeight + 10 + 'px'
-            });
-            finished(500);
-            break;
-        case 1:
-            $('#projects').animate({
-                'top': "0px"
-            }, 500);
-            finished(2500);
-            $('#projects #title').animate({
-                'opacity': "1",
-                "width": "40%"
-            }, 1500);
-            $('#projects span').show(1500);
-            $('#designs #title').animate({
-                'opacity': '0',
-                'height': "100%"
-            }, 1000);
-            setTimeout(function() {
-                $('#designs').animate({
-                    'left': window.innerWidth + 10 + 'px'
-                });
-            }, 1000);
-            break;
-        case 2:
-            $('#projects span').hide();
-            $('#projects #title').animate({
-                'opacity': "0",
-                "width": "100%"
-            }, 1000);
-            setTimeout(function() {
-
-                $('#designs').animate({
-                    'left': "0px"
-                });
-
-            }, 1000);
-            setTimeout(function() {
+        if (frame < maxFrames) {
+            $('#scrollDown').show();
+        } else {
+            $('#scrollDown').hide();
+        }
+        switch (frame) {
+            case 0:
                 $('#projects').animate({
                     'top': window.innerHeight + 10 + 'px'
                 });
+                finished(500);
+                break;
+            case 1:
+                $('#projects').animate({
+                    'top': "0px"
+                }, 500);
+                finished(2500);
+                $('#projects #title').animate({
+                    'opacity': "1",
+                    "width": "40%"
+                }, 1500);
+                $('#projects span').show(1500);
                 $('#designs #title').animate({
-                    'opacity': '1',
-                    'height': "120px"
+                    'opacity': '0',
+                    'height': "100%"
                 }, 1000);
-            }, 1500);
-            setTimeout(function() {
+                setTimeout(function() {
+                    $('#designs').animate({
+                        'left': window.innerWidth + 10 + 'px'
+                    });
+                }, 1000);
+                break;
+            case 2:
+                $('#projects span').hide();
+                $('#projects #title').animate({
+                    'opacity': "0",
+                    "width": "100%"
+                }, 1000);
+                setTimeout(function() {
+
+                    $('#designs').animate({
+                        'left': "0px"
+                    });
+
+                }, 1000);
+                setTimeout(function() {
+                    $('#projects').animate({
+                        'top': window.innerHeight + 10 + 'px'
+                    });
+                    $('#designs #title').animate({
+                        'opacity': '1',
+                        'height': "120px"
+                    }, 1000);
+                }, 1500);
+                setTimeout(function() {
+                    $('#games').animate({
+                        'top': (-1 * window.innerHeight - 10) + 'px'
+                    });
+                }, 1500);
+                finished(3000);
+                break;
+            case 3:
+                setTimeout(function() {
+                    $('#designs').animate({
+                        'left': window.innerWidth + 10 + 'px'
+                    });
+                    $('#designs #title').animate({
+                        'opacity': '0'
+                    }, 1000);
+                }, 1000);
+                $('#designs #title').animate({
+                    'height': "100%"
+                }, 1000);
+                setTimeout(function() {
+                    $('#games').animate({
+                        'opacity': '1',
+                        'top': "0px"
+                    }, 100);
+                }, 900);
+                $('#experience #content #con').animate({
+                    'opacity': '0'
+                }, 10);
+                $('#experience #content').animate({
+                    'width': '0%'
+                }, 1000);
+                $('#experience span').animate({
+                    'opacity': '0'
+                }, 10);
+                setTimeout(function() {
+                    $('#experience').animate({
+                        'left': -1 * window.innerWidth - 10 + 'px'
+                    });
+                }, 1000);
+                finished(3000);
+                break;
+            case 4:
+                $('#games').animate({
+                    'opacity': '0'
+                }, 500);
                 $('#games').animate({
                     'top': (-1 * window.innerHeight - 10) + 'px'
                 });
-            }, 1500);
-            finished(3000);
-            break;
-        case 3:
-            setTimeout(function() {
-                $('#designs').animate({
-                    'left': window.innerWidth + 10 + 'px'
-                });
-                $('#designs #title').animate({
-                    'opacity': '0'
-                }, 1000);
-            }, 1000);
-            $('#designs #title').animate({
-                'height': "100%"
-            }, 1000);
-            setTimeout(function() {
-                $('#games').animate({
+                $('#experience').animate({
                     'opacity': '1',
-                    'top': "0px"
+                    'left': "0px"
+                }, 50);
+                setTimeout(function() {
+                    $('#experience #content #con').animate({
+                        'opacity': '1'
+                    }, 200);
+                }, 1200);
+                setTimeout(function() {
+                    $('#experience #content').animate({
+                        'width': '60%'
+                    }, 1000);
+
+                    $('#experience span').animate({
+                        'opacity': '1'
+                    }, 1000);
                 }, 100);
-            }, 900);
-            $('#experience #content #con').animate({
-                'opacity': '0'
-            }, 10);
-            $('#experience #content').animate({
-                'width': '0%'
-            }, 1000);
-            $('#experience span').animate({
-                'opacity': '0'
-            }, 10);
-            setTimeout(function() {
-                $('#experience').animate({
-                    'left': -1 * window.innerWidth - 10 + 'px'
-                });
-            }, 1000);
-            finished(3000);
-            break;
-        case 4:
-            $('#games').animate({
-                'opacity': '0'
-            }, 500);
-            $('#games').animate({
-                'top': (-1 * window.innerHeight - 10) + 'px'
-            });
-            $('#experience').animate({
-                'opacity': '1',
-                'left': "0px"
-            }, 50);
-            setTimeout(function() {
+                $('#education #content').animate({
+                    'height': "0px",
+                    'opacity': "0"
+                }, 500);
+                setTimeout(function() {
+                    $('#education').animate({
+                        'top': window.innerHeight + 10 + 'px'
+                    });
+                    $('#education').animate({
+                        'opacity': "0",
+                    }, 500);
+                }, 600);
+                finished(2000);
+                break;
+            case 5:
                 $('#experience #content #con').animate({
-                    'opacity': '1'
-                }, 200);
-            }, 1200);
-            setTimeout(function() {
-                $('#experience #content').animate({
-                    'width': '60%'
-                }, 1000);
-
-                $('#experience span').animate({
-                    'opacity': '1'
-                }, 1000);
-            }, 100);
-            $('#education #content').animate({
-                'height': "0px",
-                'opacity': "0"
-            }, 500);
-            setTimeout(function() {
-                $('#education').animate({
-                    'top': window.innerHeight + 10 + 'px'
-                });
-                $('#education').animate({
-                    'opacity': "0",
-                }, 500);
-            }, 600);
-            finished(2000);
-            break;
-        case 5:
-            $('#experience #content #con').animate({
-                'opacity': '0'
-            }, 10);
-            $('#experience span').animate({
-                'opacity': '0'
-            }, 10);
-            $('#experience #content').animate({
-                'width': '0%'
-            }, 1000);
-            setTimeout(function() {
-                $('#experience').animate({
-                    'left': -1 * window.innerWidth - 10 + 'px'
-                }, 1000);
-            }, 1200);
-            setTimeout(function() {
-
-                $('#education').animate({
-                    'top': "0px"
-                }, 200);
-                $('#education').animate({
-                    'opacity': "1",
-                }, 10);
-                $('#education #content').animate({
-                    'opacity': "1",
-                }, 10);
-            }, 1000);
-            setTimeout(function() {
-                $('#education #content').animate({
-                    'height': "80%",
-                }, 500);
-
-            }, 1200);
-            setTimeout(function() {
-                $('#bio').animate({
                     'opacity': '0'
-                }, 500);
-                $('#bio').hide(1000);
-            }, 1200);
-            finished(3000);
-            break;
+                }, 10);
+                $('#experience span').animate({
+                    'opacity': '0'
+                }, 10);
+                $('#experience #content').animate({
+                    'width': '0%'
+                }, 1000);
+                setTimeout(function() {
+                    $('#experience').animate({
+                        'left': -1 * window.innerWidth - 10 + 'px'
+                    }, 1000);
+                }, 1200);
+                setTimeout(function() {
 
-        case 6:
-            $('#education').animate({
-                'opacity': '0'
-            }, 1000);
-            $('#education content').animate({
-                'opacity': "0",
-            }, 10);
-            $('#bio').show();
-            $('#bio').animate({
-                'opacity': '1'
-            }, 500);
-            finished(1500);
-            break;
+                    $('#education').animate({
+                        'top': "0px"
+                    }, 200);
+                    $('#education').animate({
+                        'opacity': "1",
+                    }, 10);
+                    $('#education #content').animate({
+                        'opacity': "1",
+                    }, 10);
+                }, 1000);
+                setTimeout(function() {
+                    $('#education #content').animate({
+                        'height': "80%",
+                    }, 500);
+
+                }, 1200);
+                setTimeout(function() {
+                    $('#bio').animate({
+                        'opacity': '0'
+                    }, 500);
+                    $('#bio').hide(1000);
+                }, 1200);
+                finished(3000);
+                break;
+
+            case 6:
+                $('#education').animate({
+                    'opacity': '0'
+                }, 1000);
+                $('#education content').animate({
+                    'opacity': "0",
+                }, 10);
+                $('#bio').show();
+                $('#bio').animate({
+                    'opacity': '1'
+                }, 500);
+                finished(1500);
+                break;
+        }
     }
 }
 
@@ -331,7 +331,7 @@ var textEffect = function() {
 
     var HEIGHT = window.innerHeight;
     var WIDTH = window.innerWidth;
-    var textScale = 2;
+    var textScale = 2/(window.innerWidth/screen.width);
     var windowHalfX = WIDTH / 2;
     var windowHalfY = HEIGHT / 2;
     var forceRadius = 0.5;
@@ -342,21 +342,29 @@ var textEffect = function() {
         e.preventDefault();
         nWIDTH = window.innerWidth;
         nHEIGHT = window.innerHeight;
+        var WIDTH = window.innerWidth,
+        HEIGHT = window.innerHeight;
+    camera.aspect = nWIDTH/nHEIGHT;
+    camera.updateProjectionMatrix();
+    //renderer.setSize(WIDTH, HEIGHT);
         renderer.setSize(nWIDTH, nHEIGHT);
-        if (nWIDTH < screen.width / 1.8) {
-            tmp1 = (0.5) * 5 / 2;
-        } else {
-            tmp1 = Math.abs(((nWIDTH) / screen.width));
-        }
+        if(nWIDTH < 800)
+        {
+            if (nWIDTH < screen.width / 1.8) {
+                tmp1 = (0.5) * 5 / 2;
+            } else {
+                tmp1 = Math.abs(((nWIDTH-WIDTH) / screen.width));
+            }
 
-        for (i = 0; i < groups.children[0].children.length; i++) {
-            groups.children[0].children[i].home.position.x = (groups.children[0].children[i].home.position.ax) * (tmp1);
-            groups.children[0].children[i].home.position.y = (groups.children[0].children[i].home.position.ay) * (tmp1);
+            for (i = 0; i < groups.children[0].children.length; i++) {
+                groups.children[0].children[i].home.position.x = (groups.children[0].children[i].home.position.ax) / (tmp1);
+                groups.children[0].children[i].home.position.y = (groups.children[0].children[i].home.position.ay) / (tmp1);
+            }
+            WIDTH = nWIDTH;
+            HEIGHT = nHEIGHT;
+            windowHalfX = WIDTH / 2;
+            windowHalfY = HEIGHT / 2;
         }
-        WIDTH = nWIDTH;
-        HEIGHT = nHEIGHT;
-        windowHalfX = WIDTH / 2;
-        windowHalfY = HEIGHT / 2;
 
     }
 
