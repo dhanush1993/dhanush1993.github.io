@@ -1,8 +1,6 @@
 $('document').ready(function () {
-    scrolled = 0;
-    setInterval(function(){
-        scrolled = 1;
-    },2000)
+    scrolled = 1;
+    
     alertTip = 0;
     killme = setTimeout(function(){
         $('#alerttip .modal-title').text('Help!');
@@ -35,6 +33,7 @@ $('document').ready(function () {
         if(scrolled==1 && Math.abs(e.deltaY)>25){
         var variation = parseInt(e.deltaY);
         scrolled = 0;
+        console.log('scrolled');
         changeFrame(variation);
         }
         
@@ -54,6 +53,11 @@ var content = [{'title':'Fault Tolerant Sensor Using Model Based Simulated Value
 
 ];
 
+function finished(t){
+    setTimeout(function(){
+        scrolled = 1;
+    },t)
+}
 
 function setup(){
     if(frame != 1)
@@ -128,10 +132,11 @@ function changeFrame(direction){
     switch(frame){
             case 0: $('#projects').animate({
                     'top':window.innerHeight+10+'px'
-                });break;
+                });finished(500);break;
             case 1: $('#projects').animate({
                     'top' : "0px"
                 },500);
+                finished(2500);
                 $('#projects #title').animate({
                     'opacity' : "1",
                     "width":"40%"
@@ -172,7 +177,7 @@ function changeFrame(direction){
                     $('#games').animate({
                         'top' : (-1*window.innerHeight-10)+'px'
                     });
-                    },1500);break;
+                    },1500);finished(3000);break;
             case 3: setTimeout(function(){
                         $('#designs').animate({
                         'left' : window.innerWidth+10+'px'
@@ -203,7 +208,8 @@ function changeFrame(direction){
                         $('#experience').animate({
                         'left' : -1*window.innerWidth-10+'px'
                     });
-                    },1000)
+                    },1000);
+                    finished(3000);
                     break;
             case 4: $('#games').animate({
                         'opacity': '0'
@@ -240,7 +246,8 @@ function changeFrame(direction){
                     $('#education').animate({
                         'opacity' : "0",
                     },500);
-                    },600)
+                    },600);
+                    finished(2000);
                     break;
             case 5: 
                     $('#experience #content #con').animate({
@@ -281,6 +288,7 @@ function changeFrame(direction){
                     },500);
                     $('#bio').hide(1000);
                     },1200);
+                    finished(3000);
                     break;
                     
             case 6: $('#education').animate({
@@ -293,6 +301,7 @@ function changeFrame(direction){
                     $('#bio').animate({
                         'opacity': '1'
                     },500);
+                    finished(1500);
                     break;
         }
 }
