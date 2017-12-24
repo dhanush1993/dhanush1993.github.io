@@ -14,12 +14,14 @@ $('document').ready(function() {
     setup();
     //$('#bio').css('left',window.innerWidth+10+'px');
     $(document).keydown(function(e) {
+        if(scrolled){
         e.preventDefault();
         if (e.keyCode == 37) { // left
             changeFrame(-120);
         } else if (e.keyCode == 39) { // right
             changeFrame(120);
         }
+    }
     });
     window.addEventListener("resize", function(e) {
         e.preventDefault();
