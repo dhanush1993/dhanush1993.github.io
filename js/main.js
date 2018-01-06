@@ -12,6 +12,7 @@ $('document').ready(function() {
         scrolled = 1;
 
     alertTip = 0;
+    defaultContainer = "logoContainer";
     killme = setTimeout(function() {
         $('#alerttip .modal-title').text('Help!');
         $('#alerttip .modal-body').html('Click <h4>Right Arrow</h4> or <h4>Scroll Down Slowly</h4> to navigate...</h4>');
@@ -65,6 +66,34 @@ var content = [{
 
 ];
 
+function conatinerChange(container){
+    switch(container){
+        case 'logoContainer': $('#modelContainer').hide();
+        $('#webContainer').hide();
+        $('#logoContainer').show();
+        $('#logoC').attr('class','nav-item active');
+        $('#modelC').attr('class','nav-item');
+        $('#webC').attr('class','nav-item');
+        break;
+
+        case 'modelContainer':$('#webContainer').hide();
+        $('#logoContainer').hide();
+        $('#modelContainer').show();
+        $('#modelC').attr('class','nav-item active');
+        $('#logoC').attr('class','nav-item');
+        $('#webC').attr('class','nav-item');
+        break;
+
+        case 'webContainer': $('#modelContainer').hide();
+        $('#logoContainer').hide();
+        $('#webContainer').show();
+        $('#webC').attr('class','nav-item active');
+        $('#modelC').attr('class','nav-item');
+        $('#logoC').attr('class','nav-item');
+        break;
+    }
+}
+
 function finished(t) {
     setTimeout(function() {
         scrolled = 1;
@@ -95,8 +124,18 @@ function showModal(what) {
 }
 
 function showImg(img) {
-    $('.modal-title').text(img);
+    $('.modal-title').text(Design);
     $('.modal-body').html("<div style='display:flex; justify-items: center; align-items: center;'><img src='" + img + " 'style='height: 60%; margin:0 auto;'></div>");
+    try {
+        $('#myModal').modal('toggle');
+    } catch (me) {
+        $('#myModal').modal();
+    }
+}
+
+function showVideo(src){
+    $('.modal-title').text(Video);
+    $('.modal-body').html("<div style='display:flex; justify-items: center; align-items: center;'><iframe src="+src+" width='640' height='480' style='margin:0 auto;'></iframe></div>");
     try {
         $('#myModal').modal('toggle');
     } catch (me) {

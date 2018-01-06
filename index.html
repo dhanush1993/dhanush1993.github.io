@@ -131,7 +131,7 @@
 					 <div id="title" style="height: 100%; padding: 20px; background: #333333; width: 100%; opacity:0;">
 							<span class="display-3" style="font-family: 'Nunito', sans-serif; font-size: 64px; color: #E3D4BC">Skills</span>
 					 </div>
-					 <div style="font-family: 'Dosis', sans-serif; background: white;">
+					 <div style="font-family: 'Dosis', sans-serif; background: white; overflow-y: auto;">
 							<ul>
 								 <li>
 										<span style="font-size:20px; text-decoration: underline;"><u>Subject Relevant - </u></span>
@@ -183,14 +183,14 @@
 								 </button>
 								 <div class="collapse navbar-collapse" id="navbarNav">
 										<ul class="navbar-nav">
-											 <li class="nav-item active">
-													<a class="nav-link" href="#" style="color: #E3D4BC;">Designs <span class="sr-only">(current)</span></a>
+											 <li id="logoC" class="nav-item active">
+													<a class="nav-link" href="#" style="color: #E3D4BC;" onclick="conatinerChange('logoContainer');">Designs <span class="sr-only">(current)</span></a>
 											 </li>
-											 <li class="nav-item">
-													<a class="nav-link" href="#" style="color: #E3D4BC;">Models</a>
+											 <li id="modelC" class="nav-item">
+													<a class="nav-link" href="#" style="color: #E3D4BC;" onclick="conatinerChange('modelContainer');">Models</a>
 											 </li>
-											 <li class="nav-item">
-													<a class="nav-link" href="#" style="color: #E3D4BC;">WebSite Themes</a>
+											 <li id="webC" class="nav-item">
+													<a class="nav-link" href="#" style="color: #E3D4BC;" onclick="conatinerChange('webContainer');">WebSite Themes</a>
 											 </li>
 										</ul>
 								 </div>
@@ -204,13 +204,20 @@
 										<img class="rounded img-thumbnail" src="img/logo5.png" onclick="showImg('img/logo5.png')" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;">
 										<img class="rounded img-thumbnail" src="img/logo6.png" onclick="showImg('img/logo6.png')" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;">
 										<img class="rounded img-thumbnail" src="img/logo7.jpg" onclick="showImg('img/logo7.jpg')" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;">
-										<img class="rounded img-thumbnail" src="img/logo1.png" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%);">
-										<img class="rounded img-thumbnail" src="img/logo2.png" style="height: 200px; margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%);">
-										<img class="rounded img-thumbnail" src="img/logo3.jpg" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%);">
-										<img class="rounded img-thumbnail" src="img/logo4.jpg" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%);">
-										<img class="rounded img-thumbnail" src="img/logo5.png" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%);">
-										<img class="rounded img-thumbnail" src="img/logo6.png" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%);">
+									<br>
+									<br>
+									<br>
+									</div>
+
+								 <div id="modelContainer" style="display: none;">
+										<img class="rounded img-thumbnail" src="img/0001.png" onclick="showImg('img/0001.png')" style="height: 200px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;">
 								 </div>
+
+								 <div id="webContainer" style="display: none;">
+									<img class="rounded img-thumbnail" src="img/web1.png" style="height: 300px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;" onclick="showVideo('https://drive.google.com/file/d/0B5oNnUDA03fzZHhjcVFCQXVTa1U/preview');">
+									<img class="rounded img-thumbnail" src="img/web2.png" style="height: 300px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;" onclick="showVideo('https://drive.google.com/file/d/1QLHpX81PDmWSsiX8o_vhrWSwIlqSHohG/preview');">
+									<img class="rounded img-thumbnail" src="img/web3.png" style="height: 300px;  margin: 10px; -webkit-filter:sepia(100%); filter:sepia(100%); cursor: pointer;" onclick="showVideo('https://drive.google.com/file/d/11wnfXkWa3NaOnzaMdDUUTkitW2hQ6maq/preview');">
+							 	</div>
 							</div>
 							<div id="blocker"></div>
 					 </div>
@@ -218,7 +225,7 @@
 		 </div>
 		 <div class="container-fluid" id="experience" style="position: absolute; top: 0px; left: 0px; margin: 0px; padding: 0px; background: white; z-index: 9; height: 100%; width: 100%;">
 				<div class="row" style="width: 100%; height: 100%; margin:0; padding: 0px; background: #333333;">
-					 <div id="content" style="height: 100%; width: 0%; background: white;">
+					 <div id="content" style="height: 100%; width: 0%; background: white; overflow-y: auto;">
 							<div id="con" style="opacity: 0;">
 								 <span style="font-size: 24px; text-align: left; display: inline-block; width: 70%;"><b>HSBC GLT, INDIA <br><span style="font-size: 12px;">- SOFTWARE DEVELOPER</span></b></span><span style="text-align: right; display: inline-block; width: 25%;"> 2016 - March 2017</span>
 								 <ul>
