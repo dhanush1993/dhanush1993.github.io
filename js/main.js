@@ -124,7 +124,7 @@ function showModal(what) {
 }
 
 function showImg(img) {
-    $('.modal-title').text(Design);
+    $('.modal-title').text('Design');
     $('.modal-body').html("<div style='display:flex; justify-items: center; align-items: center;'><img src='" + img + " 'style='height: 60%; margin:0 auto;'></div>");
     try {
         $('#myModal').modal('toggle');
@@ -134,8 +134,8 @@ function showImg(img) {
 }
 
 function showVideo(src){
-    $('.modal-title').text(Video);
-    $('.modal-body').html("<div style='display:flex; justify-items: center; align-items: center;'><iframe src="+src+" width='640' height='480' style='margin:0 auto;'></iframe></div>");
+    $('.modal-title').text('Video');
+    $('.modal-body').html("<div style='display:flex; justify-items: center; align-items: center;'><iframe src="+src+" width='1240' height='720' style='margin:0 auto;'></iframe></div>");
     try {
         $('#myModal').modal('toggle');
     } catch (me) {
