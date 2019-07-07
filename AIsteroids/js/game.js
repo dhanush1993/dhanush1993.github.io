@@ -16,6 +16,7 @@ class init{
 	}
 	
 	start(){
+		
 		window.game.update();
 		//console.log(window.game.game.scene.player.outstream)
 		window.game.draw();
@@ -24,11 +25,17 @@ class init{
 	}
 	
 	update(){
+		try{
 		window.game.game.update()
+		}catch(err){
+		}
 	}
 	
 	draw(){
+		try{
 		window.game.game.draw()
+		}catch(err){
+		}
 	}
 	
 	stop(){
