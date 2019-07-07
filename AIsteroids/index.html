@@ -77,6 +77,10 @@ input[type=number] {
 
 $(document).ready(function(){
 	$("#start").click(function(){
+		try{
+			var oP = document.body.getElementsByTagName("canvas")[0];
+            document.body.removeChild(oP);
+		}catch(err){}
 		$("#title").fadeOut(2000);
 		$("#start").animate({height: "50px", width: "75px"},2000);
 		$("#generations").animate({height: "30px"},2000);
