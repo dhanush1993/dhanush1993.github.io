@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/brain.js"></script>
+<script src="js/game.js"></script>
+<script src="js/geneticAlgorithm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap');
+	html,body{
+	margin: 0;
+	overflow: hidden;
+	}
+	
+	.title{
+		color:white;
+		font-family: 'Mountains of Christmas', cursive;
+		font-size: 64px;
+		padding:5px 20px;
+	}
+	
+	.button-style-1 {
+	-moz-box-shadow:inset 0px 0px 15px 3px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 15px 3px #ffffff;
+	box-shadow:inset 0px 0px 15px 3px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #808080));
+	background:-moz-linear-gradient(top, #ffffff 5%, #808080 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #808080 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #808080 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #808080 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #808080 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#808080',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:0px 17px 17px 0px;
+	-webkit-border-radius:0px 17px 17px 0px;
+	border-radius:0px 17px 17px 0px;
+	border:1px solid #666666;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4c5570;
+}
+.button-style-1:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #808080), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #808080 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #808080 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #808080 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #808080 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #808080 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#808080', endColorstr='#ffffff',GradientType=0);
+	background-color:#808080;
+}
+.button-style-1:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+</style>
+</head>
+<body style="width:100%; height:100%; background:#000000;">
+
+<script>
+
+$(document).ready(function(){
+	$("#start").click(function(){
+		$("#title").fadeOut(2000);
+		$("#start").animate({height: "50px", width: "75px"},2000);
+		$("#generations").animate({height: "30px"},2000);
+		$("#form").animate({top: "20px", right: "20px"},2000);
+		ini = new init(document.getElementById('generations').value)
+	})
+})
+</script>
+<div id="form" style='position:fixed; right:20px; padding:5px; z-index=99; width: 300px;'>
+	<div id='title' class='title'>AIsteroids</div><br>
+	<input id="generations" class='button-style-1' type='number' value='10' style="border-radius:17px 0px 0px 17px; margin:-5px; cursor:text; height:50px; margin-top:-5px;" min="1" max="1000">
+	<button id="start" class='button-style-1' style="height:75px; width: 100px;">Start</button>
+	
+</div>
+<script>
+	var right = (window.innerWidth/2)-150;
+	if(right<0){
+		right = right - 75
+	}
+	$("#form").css({top: (window.innerHeight/2)-100+'px', right: right+'px'},2000);
+</script>
+</body>
+</html>
