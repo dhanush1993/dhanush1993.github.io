@@ -15,11 +15,13 @@ class Brain{
 		this.outputLayer = tf.layers.dense({
 			units: 3,
 		})
+		
+	}
+	
+	initModel(){
 		this.loadModel().then(model => {
 			this.model = model;
 		});
-		
-
 	}
 	
 	async loadModel(){
@@ -69,6 +71,11 @@ class Brain{
 		this.model.weights.forEach(w => {
 			temp.push(w);
 		});
+		var model = tf.sequential()
+		model.add(this.hiddenLayer)
+		model.add(this.outputLayer)
+		model.compile({ loss: 'meanSquaredError', optimizer: 'sgd' });
+		brain.model = model;
 		brain.model.weights.forEach(w =>{
 			var y = temp.shift()
 			y.val.data().then(out=>{

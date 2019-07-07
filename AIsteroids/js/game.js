@@ -457,6 +457,7 @@ class Player{
 			ctx.drawImage(self.playersprite,self.position.x,self.position.y, 96,  96);   
 		}
 		this.brain = new Brain(22)
+		this.brain.initModel()
 	}
 	
 	think(){
