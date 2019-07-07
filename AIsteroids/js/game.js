@@ -114,6 +114,7 @@ class Game{
 					var mousePos = evt.target._self.getMousePos(evt.target, evt);
 					if (evt.target._self.isInside(mousePos,evt.target._self.saveModel.rect)) {
 						evt.target._self.scene[0].player.brain.model.save('localstorage://my-model-1');
+						alert("Model saved to localstorage");
 						evt.target._self.scene[0].player.brain.model.save('downloads://my-model-1');
 						
 					}   
