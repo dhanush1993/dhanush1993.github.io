@@ -28,6 +28,7 @@ class init{
 		try{
 		window.game.game.update()
 		}catch(err){
+			console.log(err)
 		}
 	}
 	
@@ -35,6 +36,7 @@ class init{
 		try{
 		window.game.game.draw()
 		}catch(err){
+			console.log(err)
 		}
 	}
 	
