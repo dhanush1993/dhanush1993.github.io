@@ -47,9 +47,9 @@ class GeneticAlgo{
 			players.push(pop[i].player)
 		}
 		const Winners = this.selection(players);
-		var crossover1 = new Brain(players[0].neurons)
+		var crossover1 = new Brain(players[0].brain.neurons)
 		crossover1.model = this.crossOver(Winners[0], Winners[1]);
-		const crossover2 = new Brain(players[0].neurons)
+		const crossover2 = new Brain(players[0].brain.neurons)
 		crossover2.model = this.crossOver(Winners[2], Winners[3]);
 		const mutatedWinners = this.mutateBias(Winners);
 		var mutatedPop = [crossover1, ...Winners, crossover2, ...mutatedWinners];
