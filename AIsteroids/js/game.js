@@ -427,7 +427,9 @@ class Bullet{
 		ctx.translate((this.width/2)+this.position.x,(this.height/2)+this.position.y)
 		ctx.rotate(Math.PI/180 * this.rot)
 		ctx.translate(-((this.width/2)+this.position.x),-((this.height/2)+this.position.y))
+		try{
 		ctx.drawImage(this.bulletsprite,this.position.x,this.position.y, this.width,  this.height);
+		}catch(err){}
 		ctx.restore()
 	}
 	
@@ -558,7 +560,9 @@ class Player{
 		ctx.translate((this.width/2)+this.position.x,(this.height/2)+this.position.y)
 		ctx.rotate(Math.PI/180 * this.rot)
 		ctx.translate(-((this.width/2)+this.position.x),-((this.height/2)+this.position.y))
+		try{
 		ctx.drawImage(this.playersprite,this.position.x,this.position.y, 96,  96);
+		}catch(err){}
 		ctx.restore()
 		//ctx.globalAlpha = 0.4;
 		//for (var key in this.sensor) {
@@ -659,7 +663,11 @@ class Circle{
 		ctx.translate(this.curRadius+this.position.x, this.curRadius+this.position.y);
 		ctx.rotate(Math.PI/180 * (this.currentRot+=this.rotate));
 		ctx.translate(-(this.curRadius+this.position.x), -(this.curRadius+this.position.y))
+		try{
 		ctx.drawImage(this.rockSprite,this.position.x,this.position.y,this.width,  this.height);
+		}catch(err){
+			
+		}
 		ctx.strokeStyle = '#'+this.color;
 		if(this.playersaw)
 			ctx.strokeRect(this.position.x,this.position.y,this.width,  this.height);
