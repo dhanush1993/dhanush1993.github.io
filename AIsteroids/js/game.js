@@ -464,7 +464,7 @@ class Player{
 		this.playersprite.onload = function(event){
 			ctx.drawImage(self.playersprite,self.position.x,self.position.y, 96,  96);   
 		}
-		this.brain = new Brain(22)
+		this.brain = new Brain(32)
 		this.brain.initModel()
 	}
 	
