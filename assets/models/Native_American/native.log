@@ -1,0 +1,126 @@
+Exporter version: 5.6.4, Blender version: 2.79 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		export scope        :  ALL
+		inline textures     :  false
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  C:\Education\Projects\Portfolio\Portfolio\src\assets\models\Native_American\
+	Python World class constructor completed
+	processing begun of mesh:  Native_American_male_vest
+		processing begun of Standard material:  Native_American_male_vest
+			Ambient texture found "Ka.006"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd.006"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Specular texture found "Ks"
+				Image texture found, type:  specularTexture, mapped using: "UVMap"
+		num positions      :  6612
+		num normals        :  6612
+		num uvs            :  13224
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  20556
+	processing begun of mesh:  Native_American_male_pants_shoe
+		processing begun of Standard material:  Native_American_male_pants_shoe
+			Ambient texture found "Ka.005"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd.005"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Bump texture found "Bump.002"
+				Image texture found, type:  bumpTexture, mapped using: "UVMap"
+		num positions      :  2623
+		num normals        :  2623
+		num uvs            :  5246
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  11166
+	processing begun of mesh:  Native_American_male_hand_R
+		processing begun of Standard material:  Native_American_male_hands
+			Ambient texture found "Ka.004"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd.004"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  1518
+		num normals        :  1518
+		num uvs            :  3036
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5994
+	processing begun of mesh:  Native_American_male_sweater
+		processing begun of Standard material:  Native_American_male_sweater
+			Ambient texture found "Ka.003"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd.003"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Bump texture found "Bump.001"
+				Image texture found, type:  bumpTexture, mapped using: "UVMap"
+		num positions      :  50935
+		num normals        :  50935
+		num uvs            :  101870
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  215868
+	processing begun of mesh:  Native_American_male_feather_1
+		processing begun of Standard material:  Native_American_male_feather
+			Ambient texture found "Ka.001"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd.001"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  416
+		num normals        :  416
+		num uvs            :  832
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1872
+	processing begun of mesh:  Native_American_male_hair
+		processing begun of Standard material:  Native_American_male_hair
+			Ambient texture found "Ka.002"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd.002"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  2731
+		num normals        :  2731
+		num uvs            :  5462
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  10122
+	processing begun of mesh:  Native_American_male_hands_L
+		registered as also a user of material:  Native_American_male_hands
+		num positions      :  1549
+		num normals        :  1549
+		num uvs            :  3098
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  6096
+	processing begun of mesh:  Native_American_male_feather_2
+		registered as also a user of material:  Native_American_male_feather
+		num positions      :  416
+		num normals        :  416
+		num uvs            :  832
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1872
+	processing begun of mesh:  Native_American_male_head
+		processing begun of Standard material:  Native_American_male_head
+			Ambient texture found "Ka"
+				Image texture found, type:  ambientTexture, mapped using: "UVMap"
+			Diffuse texture found "Kd"
+				Image texture found, type:  diffuseTexture, mapped using: "UVMap"
+			Bump texture found "Bump"
+				Image texture found, type:  bumpTexture, mapped using: "UVMap"
+		num positions      :  2050
+		num normals        :  2050
+		num uvs            :  4100
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  8388
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of light (POINT):  Lamp
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 7.3096 secs

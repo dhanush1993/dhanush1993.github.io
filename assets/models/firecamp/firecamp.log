@@ -1,0 +1,141 @@
+Exporter version: 6.1.2, Blender version: 2.80 (sub 74)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  C:\Education\Projects\Portfolio\Portfolio\src\assets\models\firecamp\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Log_pine
+		processing begun of material:  Material
+		Custom split normals with tangents being used
+		num positions      :  1162
+		num normals        :  1162
+		num tangents       :  1162
+		num uvs            :  2324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5484
+	processing begun of mesh:  Log_pine.001
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		Custom split normals with tangents being used
+		num positions      :  1162
+		num normals        :  1162
+		num tangents       :  1162
+		num uvs            :  2324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5484
+	processing begun of mesh:  Log_pine.002
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		Custom split normals with tangents being used
+		num positions      :  1162
+		num normals        :  1162
+		num tangents       :  1162
+		num uvs            :  2324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5484
+	processing begun of mesh:  Log_pine.003
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		Custom split normals with tangents being used
+		num positions      :  1162
+		num normals        :  1162
+		num tangents       :  1162
+		num uvs            :  2324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5484
+	processing begun of mesh:  Log_pine.004
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		Custom split normals with tangents being used
+		num positions      :  1162
+		num normals        :  1162
+		num tangents       :  1162
+		num uvs            :  2324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5484
+	processing begun of mesh:  Log_pine.005
+		processing begun of material:  Material
+		registered as also a user of material:  Material
+		Custom split normals with tangents being used
+		num positions      :  1162
+		num normals        :  1162
+		num tangents       :  1162
+		num uvs            :  2324
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  5484
+	processing begun of mesh:  rocks_01_model
+		processing begun of material:  Material.001
+			processing texture rockTexture
+				WARNING: Exception during copy:
+					'C:\\Education\\Projects\\Portfolio\\Portfolio\\src\\assets\\models\\firecamp\\rockTexture.jpg' and 'C:\\Education\\Projects\\Portfolio\\Portfolio\\src\\assets\\models\\firecamp\\rockTexture.jpg' are the same file
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  1773
+		num normals        :  1773
+		num tangents       :  1773
+		num uvs            :  3546
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9600
+	processing begun of mesh:  rocks_01_model.001
+		processing begun of material:  Material.001
+		registered as also a user of material:  Material.001
+		Custom split normals with tangents being used
+		num positions      :  1773
+		num normals        :  1773
+		num tangents       :  1773
+		num uvs            :  3546
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9600
+	processing begun of mesh:  rocks_01_model.002
+		processing begun of material:  Material.001
+		registered as also a user of material:  Material.001
+		Custom split normals with tangents being used
+		num positions      :  1773
+		num normals        :  1773
+		num tangents       :  1773
+		num uvs            :  3546
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9600
+	processing begun of mesh:  rocks_01_model.003
+		processing begun of material:  Material.001
+		registered as also a user of material:  Material.001
+		Custom split normals with tangents being used
+		num positions      :  1773
+		num normals        :  1773
+		num tangents       :  1773
+		num uvs            :  3546
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9600
+	processing begun of mesh:  rocks_01_model.004
+		processing begun of material:  Material.001
+		registered as also a user of material:  Material.001
+		Custom split normals with tangents being used
+		num positions      :  1773
+		num normals        :  1773
+		num tangents       :  1773
+		num uvs            :  3546
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  9600
+	processing begun of light (POINT):  Point
+========= Writing of JSON file started =========
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 5.443 secs

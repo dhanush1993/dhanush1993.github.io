@@ -1,0 +1,104 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 11.11.2011 13:16:52
+
+newmtl Native_American_male_head
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_head_diff.jpg
+	map_Kd Native_American_male_head_diff.jpg
+	map_bump Map__34_Normal Bump.jpg
+
+newmtl Native_American_male_feather
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_feather_diff.jpg
+	map_Kd Native_American_male_feather_diff.jpg
+
+newmtl Native_American_male_hair
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_hair_diff.jpg
+	map_Kd Native_American_male_hair_diff.jpg
+
+newmtl Native_American_male_sweater
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_sweater_diff.jpg
+	map_Kd Native_American_male_sweater_diff.jpg
+	map_bump Map__30_Normal Bump.jpg
+
+newmtl Native_American_male_hands
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_hand_diff.jpg
+	map_Kd Native_American_male_hand_diff.jpg
+
+newmtl Native_American_male_pants_shoe
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_pants_shoes_diff.jpg
+	map_Kd Native_American_male_pants_shoes_diff.jpg
+	map_bump Map__40_Normal Bump.jpg
+
+newmtl Native_American_male_vest
+	Ns 41.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.9180 0.9180 0.9180
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Native_American_male_vest_diff.jpg
+	map_Kd Native_American_male_vest_diff.jpg
+	map_Ks Native_American_male_vest_spec.jpg

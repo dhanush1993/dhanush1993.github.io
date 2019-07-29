@@ -1,0 +1,90 @@
+# Blender MTL File: 'None'
+# Material Count: 7
+
+newmtl Native_American_male_feather
+Ns 9.803922
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_feather_diff.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_feather_diff.jpg
+
+newmtl Native_American_male_hair
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_hair_diff.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_hair_diff.jpg
+
+newmtl Native_American_male_hands
+Ns 9.803922
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_hand_diff.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_hand_diff.jpg
+
+newmtl Native_American_male_head
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_head_diff.jpg
+map_Bump C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Map__34_Normal Bump.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_head_diff.jpg
+
+newmtl Native_American_male_pants_shoe
+Ns 9.803922
+Ka 0.588200 0.588200 0.588200
+Kd 0.588200 0.588200 0.588200
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_pants_shoes_diff.jpg
+map_Bump C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Map__40_Normal Bump.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_pants_shoes_diff.jpg
+
+newmtl Native_American_male_sweater
+Ns 9.803922
+Ka 0.588200 0.588200 0.588200
+Kd 0.588200 0.588200 0.588200
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_sweater_diff.jpg
+map_Bump C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Map__30_Normal Bump.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_sweater_diff.jpg
+
+newmtl Native_American_male_vest
+Ns 39.215686
+Ka 0.588200 0.588200 0.588200
+Kd 0.588200 0.588200 0.588200
+Ks 0.918000 0.918000 0.918000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\Users\Dhanush Srinivasa\Downloads\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\Native_American_male_vest_diff.jpg
+map_Ka C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_vest_diff.jpg
+map_Ks C:\\Users\\Dhanush Srinivasa\\Downloads\\Native_American_v2_L1.123ce57fb4dd-783e-401c-be09-40c3a52cd1b3\\Native_American_male_vest_spec.jpg
